@@ -16,3 +16,9 @@ var asciiHogwarts string
 func PrintHogwarts() {
 	fmt.Println(Hogwarts + asciiHogwarts + Reset)
 }
+
+//go:embed Leave.txt
+var asciiLeave string
+func PrintLeave() {
+	fmt.Println(Purple + asciiLeave + Reset)
+}

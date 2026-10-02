@@ -1,8 +1,12 @@
 package src
 
-import "os"
+import (
+	"os"
+	"src/src/asciiart"
+)
 
 func Leave() {
 	ClearTerminal()
+	asciiart.PrintLeave()
 	os.Exit(0)
 }

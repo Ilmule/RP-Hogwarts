@@ -67,6 +67,21 @@ func LancerMagasinquidditch() {
 			break
 		}
 
+		if strings.ToLower(strings.TrimSpace(choix)) == "inv" {
+			ClearTerminal()
+			AfficherInventaire(LancerMagasinquidditch)
+		}
+
+		if strings.ToLower(strings.TrimSpace(choix)) == "fournitures" {
+			ClearTerminal()
+			Printlistefourniture()
+		}
+
+		if strings.ToLower(strings.TrimSpace(choix)) == "leave" {
+			ClearTerminal()
+			Leave()
+		}
+
 		var idx int
 		_, err := fmt.Sscan(choix, &idx)
 		if err != nil || idx < 1 || idx > len(catalogue) {
